@@ -1,0 +1,400 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RedBirds | Advanced Cybersecurity</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#b4c5ff",
+              "on-secondary-fixed-variant": "#004e5c",
+              "surface-container-high": "#282a32",
+              "on-primary-fixed-variant": "#003ea8",
+              secondary: "#4cd7f6",
+              tertiary: "#ffb596",
+              "surface-container": "#1d1f27",
+              "tertiary-fixed": "#ffdbcd",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              primary: "#b4c5ff",
+              outline: "#8d90a0",
+              "on-background": "#e1e2ed",
+              "on-primary": "#002a78",
+              "on-secondary": "#003640",
+              "on-tertiary-fixed": "#360f00",
+              "inverse-on-surface": "#2e3039",
+              "surface-container-lowest": "#0c0e16",
+              "tertiary-container": "#bc4800",
+              "secondary-fixed": "#acedff",
+              "outline-variant": "#434655",
+              error: "#ffb4ab",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-primary-fixed": "#00174b",
+              "on-tertiary": "#581e00",
+              "on-secondary-fixed": "#001f26",
+              "primary-fixed": "#dbe1ff",
+              "surface-container-highest": "#32343d",
+              "on-error": "#690005",
+              "secondary-container": "#03b5d3",
+              "primary-container": "#2563eb",
+              "on-tertiary-container": "#ffede6",
+              "on-surface-variant": "#c3c6d7",
+              "error-container": "#93000a",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-secondary-container": "#00424e",
+              "surface-variant": "#32343d",
+              "inverse-primary": "#0053db",
+              "on-surface": "#e1e2ed",
+              "inverse-surface": "#e1e2ed",
+              "surface-dim": "#11131b",
+              "surface-bright": "#373942",
+              "secondary-fixed-dim": "#4cd7f6",
+              background: "#11131b",
+              "on-primary-container": "#eeefff",
+              "surface-container-low": "#191b23",
+              surface: "#11131b",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              base: "8px",
+              lg: "48px",
+              sm: "12px",
+              xs: "4px",
+              "container-max": "1280px",
+              gutter: "24px",
+              xl: "80px",
+              md: "24px",
+            },
+            fontFamily: {
+              h2: ["Space Grotesk"],
+              h3: ["Space Grotesk"],
+              body: ["Inter"],
+              caption: ["Inter"],
+              h1: ["Space Grotesk"],
+            },
+            fontSize: {
+              h2: [
+                "42px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              h3: [
+                "28px",
+                { lineHeight: "1.3", letterSpacing: "0", fontWeight: "700" },
+              ],
+              body: [
+                "17px",
+                { lineHeight: "1.7", letterSpacing: "0", fontWeight: "400" },
+              ],
+              caption: [
+                "14px",
+                {
+                  lineHeight: "1.4",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              h1: [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts & Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-body text-on-surface antialiased overflow-x-hidden">
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-[#0A0F1E]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-blue-900/20"
+    >
+      <div
+        class="flex justify-between items-center px-8 h-20 w-full max-w-full"
+      >
+        <div
+          class="text-2xl font-bold tracking-tighter text-white font-['Space_Grotesk']"
+        >
+          RedBirds
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Space_Grotesk'] text-sm tracking-wide"
+            href="#"
+            >Services</a
+          >
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Space_Grotesk'] text-sm tracking-wide"
+            href="#"
+            >VAPT</a
+          >
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Space_Grotesk'] text-sm tracking-wide"
+            href="#"
+            >Risk Assessment</a
+          >
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Space_Grotesk'] text-sm tracking-wide"
+            href="#"
+            >Compliance</a
+          >
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Space_Grotesk'] text-sm tracking-wide"
+            href="#"
+            >Case Studies</a
+          >
+        </nav>
+        <button
+          class="bg-[#2563eb] text-white px-6 py-2.5 rounded-lg font-['Space_Grotesk'] font-bold hover:bg-blue-600 transition-all duration-200 active:scale-95"
+        >
+          Get Consultation
+        </button>
+      </div>
+    </header>
+
+    <main class="relative min-h-screen pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative w-full min-h-[calc(100vh-80px)] flex items-center overflow-hidden grid-pattern"
+      >
+        <!-- Background Glows -->
+        <div
+          class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-container/20 rounded-full blur-[120px]"
+        ></div>
+        <div
+          class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary-container/20 rounded-full blur-[120px]"
+        ></div>
+        <div
+          class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+        >
+          <!-- Text Content -->
+          <div class="md:col-span-7 flex flex-col gap-8 z-10">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-secondary w-fit"
+            >
+              <span
+                class="material-symbols-outlined text-sm"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >verified_user</span
+              >
+              <span class="font-caption text-[12px] uppercase tracking-[0.2em]"
+                >Next-Gen Security</span
+              >
+            </div>
+            <h1 class="font-h1 text-h1 text-white max-w-2xl">
+              <span class="text-transparent bg-clip-text cyber-gradient"
+                >Secure Your Business Before Threats Find You</span
+              >
+            </h1>
+            <p class="font-body text-body text-[#94A3B8] max-w-xl">
+              We provide VAPT, Risk Assessment, Threat Modeling, IT Audit, and
+              Meta Verification services for SMBs. Our elite cybersecurity
+              specialists deploy advanced defensive protocols to safeguard your
+              digital sovereignty.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+              <button
+                class="cyber-gradient text-white px-8 py-4 rounded-xl font-h3 text-[18px] w-full sm:w-auto hover:brightness-110 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-300 active:scale-95"
+              >
+                Get a Free Consultation
+              </button>
+              <button
+                class="border border-outline-variant text-on-surface px-8 py-4 rounded-xl font-h3 text-[18px] w-full sm:w-auto hover:bg-white/5 transition-all duration-300 active:scale-95"
+              >
+                View Our Services
+              </button>
+            </div>
+            <!-- Trust Indicators -->
+            <div class="pt-12 grid grid-cols-3 gap-8 border-t border-white/5">
+              <div>
+                <div class="text-white font-h2 text-[32px]">500+</div>
+                <div class="text-[#94A3B8] font-caption">Audits Completed</div>
+              </div>
+              <div>
+                <div class="text-white font-h2 text-[32px]">99%</div>
+                <div class="text-[#94A3B8] font-caption">
+                  Threat Neutralization
+                </div>
+              </div>
+              <div>
+                <div class="text-white font-h2 text-[32px]">24/7</div>
+                <div class="text-[#94A3B8] font-caption">Elite Support</div>
+              </div>
+            </div>
+          </div>
+          <!-- Illustration Content -->
+          <div
+            class="md:col-span-5 relative flex justify-center items-center z-10"
+          >
+            <div
+              class="relative w-full aspect-square flex justify-center items-center"
+            >
+              <!-- Abstract Orbiting Elements -->
+              <div
+                class="absolute w-[120%] h-[120%] border border-blue-500/10 rounded-full animate-spin-slow"
+              ></div>
+              <div
+                class="absolute w-[90%] h-[90%] border border-cyan-500/10 rounded-full animate-spin-reverse"
+              ></div>
+              <!-- Main Shield Illustration Wrapper -->
+              <div
+                class="glass-card p-12 rounded-[40px] relative overflow-hidden group"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-500/10 opacity-50"
+                ></div>
+                <img
+                  alt="Advanced Cybersecurity Shield"
+                  class="w-full h-auto object-contain glow-cyan opacity-80 group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7pRiCSgnvRHUDpjDbOkp7KVNchF5sJzHhszZsSwY_BhtkxDGC6OY78WWKvKEnlZ6LU2-b96qpaLDyT8tfHkkU5lz3_IYta_ftZjC4h5yX7vVjk71R5JUgVpz0ptI5RhVlzSTpNYu6KQWuDsbZDF6NybaOM8k8YMfeGXi0t52rrDr05wbgioAt5fy6E-ct_I_tQS8en5q9NsqO9_ajTpE59BZ3n-hhEbqjhT1VFpyF8e3UHkzbvs2Ocghd6MwMusuwoHsIdwubNDeS"
+                />
+                <!-- Floating Data Points -->
+                <div
+                  class="absolute top-8 right-8 flex items-center gap-2 px-3 py-1 rounded bg-green-500/20 border border-green-500/30"
+                >
+                  <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                  <span class="text-[10px] font-mono text-green-400"
+                    >ENCRYPTION ACTIVE</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bento Grid Services Preview -->
+      <section class="py-xl bg-surface-container-lowest">
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="mb-lg">
+            <h2 class="font-h2 text-h2 text-white">Our Core Expertise</h2>
+            <p class="font-body text-body text-[#94A3B8]">
+              Comprehensive defense for the modern enterprise.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="glass-card p-md rounded-xl hover:bg-white/[0.06] transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-secondary text-4xl mb-4"
+                >security</span
+              >
+              <h3 class="font-h3 text-h3 text-white mb-2">VAPT</h3>
+              <p class="font-caption text-slate-400">
+                Deep penetration testing and vulnerability assessments to
+                identify critical security gaps.
+              </p>
+            </div>
+            <div
+              class="glass-card p-md rounded-xl hover:bg-white/[0.06] transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-secondary text-4xl mb-4"
+                >troubleshoot</span
+              >
+              <h3 class="font-h3 text-h3 text-white mb-2">Risk Assessment</h3>
+              <p class="font-caption text-slate-400">
+                Strategic evaluation of digital infrastructure to mitigate
+                potential operational hazards.
+              </p>
+            </div>
+            <div
+              class="glass-card p-md rounded-xl hover:bg-white/[0.06] transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-secondary text-4xl mb-4"
+                >verified</span
+              >
+              <h3 class="font-h3 text-h3 text-white mb-2">Compliance</h3>
+              <p class="font-caption text-slate-400">
+                Ensuring your systems meet global standards including ISO, SOC2,
+                and HIPAA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-white/5 bg-[#0A0F1E]">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full"
+      >
+        <div class="flex flex-col gap-2 mb-8 md:mb-0">
+          <div
+            class="text-xl font-bold text-white font-['Space_Grotesk'] tracking-tighter"
+          >
+            RedBirds
+          </div>
+          <p class="font-['Space_Grotesk'] text-sm text-slate-500 max-w-xs">
+            Defending the digital frontier with technical precision and
+            sovereign security solutions.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="flex gap-6">
+            <a
+              class="font-['Space_Grotesk'] text-sm tracking-wide text-slate-500 hover:text-blue-300 transition-colors"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-sm tracking-wide text-slate-500 hover:text-blue-300 transition-colors"
+              href="#"
+              >Terms of Service</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-sm tracking-wide text-slate-500 hover:text-blue-300 transition-colors"
+              href="#"
+              >Security Audit</a
+            >
+            <a
+              class="font-['Space_Grotesk'] text-sm tracking-wide text-slate-500 hover:text-blue-300 transition-colors"
+              href="#"
+              >Contact Support</a
+            >
+          </div>
+          <div
+            class="font-['Space_Grotesk'] text-sm tracking-wide text-slate-500"
+          >
+            © 2024 RedBirds Cybersecurity. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
