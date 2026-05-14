@@ -10,7 +10,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.3.0-FF0055?style=flat-square&logo=framer)](https://www.framer.com/motion/)
 [![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](./LICENSE)
 
-[Live Demo]([#](https://red-birds-puce.vercel.app/)) · [Report Bug](https://github.com/Riddhi73/RedBirds/issues) · [Request Feature](https://github.com/Riddhi73/RedBirds/issues)
+[Live Demo](https://red-birds-puce.vercel.app/) · [Report Bug](https://github.com/Riddhi73/RedBirds/issues) · [Request Feature](https://github.com/Riddhi73/RedBirds/issues)
 
 </div>
 
